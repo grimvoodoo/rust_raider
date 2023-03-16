@@ -11,6 +11,17 @@ enum Zones {
     Space,
 }
 
+enum GenericEncounter {
+    Combat {
+        description: String,
+        solutions: Vec<String>,
+        reward: String,
+    },
+    Social {
+        
+    }
+}
+
 
 fn main() {
     // Set character name
@@ -133,29 +144,33 @@ fn adventure(area: Zones) {
 fn desert() {
     println!("{}", "you are in a desert, What do you do?".green());
     let action = input();
-    println!("You perform {action}");
+    println!("{} {}", "You perform".red(), action.red());
 }
 
 fn forest() {
     println!("{}", "you are in a Forest, What do you do?".green());
     let action = input();
-    println!("You perform {action}");
+    println!("{} {}", "You perform".red(), action.red());
 }
 
 fn mountain() {
     println!("{}", "you are in a Mountain, What do you do?".green());
     let action = input();
-    println!("You perform {action}");
+    println!("{} {}", "You perform".red(), action.red());
 }
 
 fn underground() {
     println!("{}", "you are in a Underground, What do you do?".green());
     let action = input();
-    println!("You perform {action}");
+    println!("{} {}", "You perform".red(), action.red());
 }
 
 fn space() {
     println!("{}", "you are in a Space, What do you do?".green());
     let action = input();
-    println!("You perform {action}");
+    println!("{} {}", "You perform".red(), action.red());
+}
+
+fn generic_encounter() {
+
 }
